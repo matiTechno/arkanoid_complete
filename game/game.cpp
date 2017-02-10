@@ -5,8 +5,9 @@
 #include <input.hpp>
 #include <game/collisions.hpp>
 #include <postprocessor.hpp>
+#include <iostream>
 
-Game::Game(const glm::vec2&, PostProcessor& pp):
+Game::Game(const glm::vec2& fbSize, PostProcessor& pp):
     Menu(MenuName::Game),
     pp(pp),
     background_tex("res/background_Jerom.png"),
@@ -58,6 +59,12 @@ Game::Game(const glm::vec2&, PostProcessor& pp):
     glm::vec2 projSize(640.f, 480.f);
     this->projSize = projSize;
     projection = glm::ortho(0.f, projSize.x, projSize.y, 0.f);
+
+    if(projSize.x / projSize.y != fbSize.x / fbSize.y)
+    {
+        std::cout << "warning: game aspect ratio is " << std::to_string(int(projSize.x)) << 'x'
+                  << std::to_string(int(projSize.y)) << std::endl;
+    }
 
     bottom_line = projSize.y;
 

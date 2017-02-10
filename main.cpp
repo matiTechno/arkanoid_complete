@@ -19,8 +19,8 @@ int main(int argc, char** argv)
     unsigned width = 0, height = 0;
     if(argc == 1)
     {
-        width = 640;
-        height = 480;
+        width = 800;
+        height = 600;
     }
     else if(argc == 3)
     {
@@ -30,11 +30,6 @@ int main(int argc, char** argv)
             std::stringstream ss_height(argv[2]);
             ss_width >> width;
             ss_height >> height;
-
-            if(float(width) / float(height) != 640.f / 480.f)
-            {
-                std::cout << "warning: game aspect ratio is 640 / 480" << std::endl;
-            }
         }
         else
         {
