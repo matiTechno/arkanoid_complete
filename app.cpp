@@ -37,6 +37,8 @@ void App::window_focus_callback(GLFWwindow*, int focused)
 
 App::~App()
 {
+    // without this call game crashes on osx
+    SoundSystem::end();
     // tricky :)
     renderer.reset();
     postProcessor.reset();

@@ -109,6 +109,16 @@ public:
         }
     }
 
+    static void end()
+    {
+        click_sound.reset();
+        switch_sound.reset();
+        click_buffer.reset();
+        switch_buffer.reset();
+        game_sounds.clear();
+        game_s_buffers.clear();
+    }
+
     static std::unordered_map<G_sound::Sound, sf::SoundBuffer, std::hash<int>> game_s_buffers;
     static std::unordered_map<G_sound::Sound, sf::Sound, std::hash<int>> game_sounds;
 
