@@ -23,14 +23,14 @@ Mac && Windows
 follow these guides:
 * [Compiling GLFW](http://www.glfw.org/docs/latest/compile_guide.html)
 * [Building applications with GLFW](http://www.glfw.org/docs/latest/build_guide.html)
-* [SFML Tutorials](www.sfml-dev.org/tutorials)
+* [SFML Tutorials](http://www.sfml-dev.org/tutorials)
 
 ### resolution
 Default window size is 640x480. You can change it by passing new width and height as arguments when invoking program (keep the aspect ratio).
-It is not possible to change resolution during runtime due to my postprocessing system inflexibility (but there is an easy fix and it will be implemented in future projects).
+It is not possible to change resolution during runtime due to my postprocessing system inflexibility (but there is an easy fix and it will be implemented in next versions / applications).
 
 ### performance
 Debugging with [apitrace](https://github.com/apitrace/apitrace) did not show any bottlenecks. On linux with Intel HD graphics 520 it runs
 with 240 fps (900x700 framebuffer). Postprocessing (bloom mostly) takes most of the frametime.
-In future projects I will definitely use instanced rendering for sprites to limit opengl api calls. I will consider using glMapBufferRange instead
+In future I will definitely use instanced rendering for sprites to limit opengl api calls. I will consider using glMapBufferRange instead
 of glBufferSubData when rendering particles (or even move them to gpu with transform feedback or compute shader).
