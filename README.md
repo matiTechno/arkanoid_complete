@@ -25,8 +25,10 @@ follow these guides:
 * [Building applications with GLFW](http://www.glfw.org/docs/latest/build_guide.html)
 * [SFML Tutorials](http://www.sfml-dev.org/tutorials)
 
+I have succesfully compiled this app without any code tweaking on all three platforms and everything works smooth.
+
 ### resolution
-Default window size is 640x480. You can change it by passing new width and height as arguments when invoking program (keep the aspect ratio).
+Default window size is 800x600. You can change it by passing new width and height as arguments when invoking program (keep the aspect ratio).
 It is not possible to change resolution during runtime due to my postprocessing system inflexibility (but there is an easy fix and it will be implemented in next versions / applications).
 
 ### performance
