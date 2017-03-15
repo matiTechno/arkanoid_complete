@@ -3,8 +3,8 @@
 ![](https://github.com/matimaci/arkanoid_complete/blob/master/screens/screen3.png)
 ![](https://github.com/matimaci/arkanoid_complete/blob/master/screens/screen2.png)
 
-####on Windows 10 just run the [exe file](https://github.com/matimaci/arkanoid_complete/blob/master/win10_x64.exe) (must be in the same directory as res)
-####in case of missing openal dll download and run oalinst.exe from [this site](https://www.gog.com/forum/hotline_miami_series/openal32dll_missing_cant_launch_the_game_101) (first post)
+#### on Windows 10 just run the [exe file](https://github.com/matimaci/arkanoid_complete/blob/master/win10_x64.exe) (must be in the same directory as res)
+#### in case of missing openal dll download and run oalinst.exe from [this site](https://www.gog.com/forum/hotline_miami_series/openal32dll_missing_cant_launch_the_game_101) (first post)
 
 dependencies (headers and libs):
 * [sfml-audio](https://github.com/SFML/SFML)
