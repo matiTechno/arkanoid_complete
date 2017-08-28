@@ -40,6 +40,7 @@ App::~App()
     // without this call game crashes on osx
     SoundSystem::end();
     // tricky :)
+    menus.clear();
     renderer.reset();
     postProcessor.reset();
     glfwTerminate();
