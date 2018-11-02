@@ -160,7 +160,7 @@ void Renderer_2D::render(const Sprite& sprite) const
 {
     vao.bind();
 
-    glm::mat4 model;
+    glm::mat4 model(1.f);
     model = glm::translate(model, glm::vec3(sprite.position, 0.f));
     model = glm::rotate(model, sprite.rotation, glm::vec3(0.f, 0.f, -1.f));
     model = glm::scale(model, glm::vec3(sprite.size, 1.f));
@@ -242,7 +242,7 @@ void Renderer_2D::render(const Text& text) const
                             pen_pos.y + (text.font->maxBearingY - character.bearing.y) * text.scale);
         glm::vec2 glyph_size(character.texCoords.z * text.scale, character.texCoords.w * text.scale);
 
-        glm::mat4 model;
+        glm::mat4 model(1.f);
         model = glm::translate(model, glm::vec3(glyph_pos, 0.f));
         model = glm::scale(model, glm::vec3(glyph_size, 1.f));
         glUniformMatrix4fv(shader_font->getUniLoc("model"), 1, GL_FALSE, &model[0][0]);
